@@ -1,0 +1,48 @@
+
+<template name="search">
+    {{> esInput index="wordsdk" placeholder="Indtast dansk ord..." }}
+
+{{#ifEsInputIsEmpty index="wordsdk"}}
+        <div>Søg Dansk - Fransk</div>
+{{else}}
+    <div class="results-wrapper">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Dansk</th>
+                    <th>Fransk</th>
+                    <th>FR fork</th>
+                    <th>DK fork</th>
+                </tr>
+
+                </thead>
+                <tbody>
+                {{#esEach index="wordsdk"}}
+                    <tr>
+                        <td>{{DK}}</td>
+                        <td>{{FR}}</td>
+                        <td>{{FRForkortelse}}</td>
+                        <td>{{DKforkortelse}}</td>
+                    </tr>
+                {{/esEach}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    {{> esLoadMoreButton index="wordsdk"}}
+
+    {{/ifEsInputIsEmpty}}
+
+    {{#ifEsIsSearching index="wordsdk"}}
+        <div>Henter data...</div>
+        {{> spinner}}
+
+
+    {{/ifEsIsSearching}}
+
+    {{#ifEsHasNoResults index="wordsdk"}}
+        <div class="no-results">Beklager, men det kan jeg ikke finde til dig!</div>
+    {{/ifEsHasNoResults}}
+ </template>
