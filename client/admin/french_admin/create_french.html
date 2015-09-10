@@ -1,0 +1,223 @@
+<template name="createfrench">
+
+
+    <div class="header">
+        <h4>Nyt ord eller begreb til ordbogen</h4>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-xs-12  col-md-2">
+
+            <form role="form">
+                <div class="form-group">
+
+                    <label for="input-spm1">Kategori</label>
+
+                    <div class="input-group">
+
+                        <input type="text" class="form-control" id="input-cat" value="{{word.Kategori}}">
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+        <div class="col-xs-12  col-md-2">
+
+            <form role="form">
+                <div class="form-group">
+
+                    <label for="input-spm3">Dansk</label>
+
+                    <div class="input-group">
+
+                        <input type="text" class="form-control" id="input-dk" value="{{word.DK}}">
+                    </div>
+                </div>
+
+            </form>
+
+
+
+        </div>
+        <div class="col-xs-12  col-md-2">
+            <div class="form-group">
+
+                <label for="input-spm3">Fransk</label>
+
+                <div class="input-group">
+
+                    <input type="text" class="form-control" id="input-fr" value="{{word.FR}}">
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-xs-12  col-md-2">
+
+            <div class="form-group">
+
+                <label for="input-spm3">DK Forkortelse</label>
+
+                <div class="input-group">
+
+                    <input type="text" class="form-control" id="input-fork-dk" value="{{word.DKForkortelse}}">
+                </div>
+            </div>
+
+        </div>
+        <div class="col-xs-12  col-md-2">
+
+            <div class="form-group">
+
+                <label for="input-spm3">FR Forkortelse</label>
+
+                <div class="input-group">
+
+                    <input type="text" class="form-control" id="input-fork-fr" value="{{word.FRForkortelse}}">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-xs-12  col-md-2">
+
+            <form role="form">
+                <div class="form-group">
+
+                    <label for="input-spm3">Ordklasse</label>
+
+                    <div class="input-group">
+
+                        <input type="text" class="form-control" id="input-klasse" value="{{word.Ordklasse}}">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <!--</div>-->
+    <br/>
+    <hr/>
+    <div class="row">
+        <div class="col-xs-12  col-md-2">
+
+            <form role="form">
+                <div class="form-group">
+
+                    <label for="input-spm3">Ejefald</label>
+
+                    <div class="input-group">
+
+                        <input type="text" class="form-control" id="input-ejefald" value="{{word.Ejefald}}">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+
+        <div class="col-xs-12  col-md-2">
+
+            <form role="form">
+                <div class="form-group">
+
+                    <label for="input-spm3">Flertal</label>
+
+                    <div class="input-group">
+
+                        <input type="text" class="form-control" id="input-plural" value="{{word.Flertal}}">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="col-xs-12  col-md-2">
+
+            <form role="form">
+                <div class="form-group">
+
+                    <label for="input-spm3">Ukategori 1</label>
+
+                    <div class="input-group">
+
+                        <input type="text" class="form-control" id="input-ukat1" value="{{word.Ukategori1}}">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="col-xs-12  col-md-2">
+
+            <form role="form">
+                <div class="form-group">
+
+                    <label for="input-spm3">Ukategori 2</label>
+
+                    <div class="input-group">
+
+                        <input type="text" class="form-control" id="input-ukat2" value="{{word.Ukategori2}}">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="col-xs-12  col-md-2">
+
+            <form role="form">
+                <div class="form-group">
+
+                    <label for="input-spm3">Ukategori 3</label>
+
+                    <div class="input-group">
+
+                        <input type="text" class="form-control" id="input-ukat3" value="{{word.Ukategori3}}">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="row">
+
+            <div class="col-xs-12 col-md-10 text-center">
+                <br/>
+                <br/>
+                <button type="button" data-dismiss="modal" class="btn btn-default cancel">Fortryd</button>
+                <button type="button" class="btn btn-success opret">Gem og luk</button>
+            </div>
+        </div>
+
+    </div>
+
+
+</template>
+
+<!--<template name="editquestion">
+    {{> editquestions}}
+</template>
+
+<template name="uploadedInfo">
+    <div class="documentList">
+        <ul class="list-inline">
+            {{#each this}}
+                <li class="documentItem">
+                    <a href="/upload/{{path}}"><img src="{{src}}"></a><br/>
+                    <label>{{ name }}</label> <br/>
+                    {{ size }} KB<br>
+                    {{#if _id}}
+                        <a class="btn btn-danger deleteUpload">Delete</a>
+                    {{/if}}
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+
+
+</template>-->

@@ -5,10 +5,14 @@
 # but you can also edit it by hand.
 
 meteor-platform
-
-appcache
-ground:db
-mrt:bootstrap-3
 matteodem:easy-search
 iron:router
+alanning:roles
 sacha:spin
+http
+twbs:bootstrap
+softwarerero:accounts-t9n
+tomi:upload-server
+reactive-var
+tomi:upload-jquery
+joshowens:accounts-entry

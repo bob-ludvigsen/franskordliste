@@ -1,0 +1,34 @@
+<template name="admin">
+
+    {{> adminTemplate}}
+
+</template>
+
+<template name="adminTemplate">
+
+
+    {{#if isInRole 'admin, hto'}}
+        {{> accountsAdmin}}
+    {{else}}
+        <p>Du skal være logget på for at administrere</p>
+
+        <p><a data-toggle="modal" href="#loginmodal">Log på</a></p>
+
+    {{/if}}
+
+
+    <p><a href="/">Tilbage til ordlisterne</a></p>
+
+    <p><a data-toggle="modal" href="#resetmodal">Glemt adgangskode</a></p>
+
+
+    {{#if currentUser}}
+        <p><a href="#" class="logout">Logout</a></p>
+        <!--  <li><span data-toggle="modal" href="#loginmodal" class="glyphicon glyphicon-log-in clickable"></span></li>-->
+    {{/if}}
+
+  <!--  login og reset password modals..-->
+   <!-- {{> login}}-->
+   <!-- {{> resetpasswd}}-->
+
+</template>

@@ -1,0 +1,334 @@
+<template name="editfrench">
+
+
+    <div class="header">
+        <h4>Rediger ord og begreber i ordbogen</h4>
+    </div>
+
+    <!--<div class="modal-body">-->
+
+<!--    <div class="row">
+
+
+        <div class="col-xs-12  col-md-6">
+
+            <div class="text-box-logo">
+
+                <div class="form-group">
+                    <label for="input-question">Ret spørgsmål</label>
+
+                    <div class="input-group">
+                            <textarea name="text" rows="3" cols="100" class="form-control question" id="input-question"
+                                      maxlength="500">{{word.ord}}</textarea>
+
+                        <div id="charNum"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+       &lt;!&ndash;<div class="col-xs-12  col-md-4">
+
+            <form role="form">
+                <label for="image">Indsæt billede</label>
+                {{#if quest.logo}}
+                    <img src="{{quest.logo}}" class="img-responsive">
+                    <a class="btn btn-danger deleteImage">Delete</a>
+                {{else}}
+                    <P>du mangler at vælge</P>
+                    {{> upload_bootstrap fileTypes='image/*' formData=myFormDataImage callbacks=Image }}
+                    {{> dropzone formData=myFormDataImage callbacks=Image}}
+
+                {{/ if}}
+            </form>
+
+        </div>&ndash;&gt;
+
+
+    </div>
+    <br/>
+    <hr/>-->
+    <!--Svar til spørgsmålene-->
+
+    <div class="row">
+        <div class="col-xs-12  col-md-2">
+
+            <form role="form">
+                <div class="form-group">
+
+                    <label for="input-spm1">Kategori</label>
+
+                    <div class="input-group">
+
+                        <input type="text" class="form-control" id="input-cat" value="{{word.Kategori}}">
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+        <div class="col-xs-12  col-md-2">
+
+            <form role="form">
+                <div class="form-group">
+
+                    <label for="input-spm3">Dansk</label>
+
+                    <div class="input-group">
+
+                        <input type="text" class="form-control" id="input-dk" value="{{word.DK}}">
+                    </div>
+                </div>
+
+            </form>
+
+
+
+        </div>
+        <div class="col-xs-12  col-md-2">
+            <div class="form-group">
+
+                <label for="input-spm3">Fransk</label>
+
+                <div class="input-group">
+
+                    <input type="text" class="form-control" id="input-fr" value="{{word.FR}}">
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-xs-12  col-md-2">
+
+            <div class="form-group">
+
+                <label for="input-spm3">DK Forkortelse</label>
+
+                <div class="input-group">
+
+                    <input type="text" class="form-control" id="input-fork-dk" value="{{word.DKForkortelse}}">
+                </div>
+            </div>
+
+        </div>
+        <div class="col-xs-12  col-md-2">
+
+            <div class="form-group">
+
+                <label for="input-spm3">FR Forkortelse</label>
+
+                <div class="input-group">
+
+                    <input type="text" class="form-control" id="input-fork-fr" value="{{word.FRForkortelse}}">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-xs-12  col-md-2">
+
+            <form role="form">
+                <div class="form-group">
+
+                    <label for="input-spm3">Ordklasse</label>
+
+                    <div class="input-group">
+
+                        <input type="text" class="form-control" id="input-klasse" value="{{word.Ordklasse}}">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <!--</div>-->
+    <br/>
+    <hr/>
+    <div class="row">
+        <div class="col-xs-12  col-md-2">
+
+            <form role="form">
+                <div class="form-group">
+
+                    <label for="input-spm3">Ejefald</label>
+
+                    <div class="input-group">
+
+                        <input type="text" class="form-control" id="input-ejefald" value="{{word.Ejefald}}">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+
+        <div class="col-xs-12  col-md-2">
+
+            <form role="form">
+                <div class="form-group">
+
+                    <label for="input-spm3">Flertal</label>
+
+                    <div class="input-group">
+
+                        <input type="text" class="form-control" id="input-plural" value="{{word.Flertal}}">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="col-xs-12  col-md-2">
+
+            <form role="form">
+                <div class="form-group">
+
+                    <label for="input-spm3">Ukategori 1</label>
+
+                    <div class="input-group">
+
+                        <input type="text" class="form-control" id="input-ukat1" value="{{word.Ukategori1}}">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="col-xs-12  col-md-2">
+
+            <form role="form">
+                <div class="form-group">
+
+                    <label for="input-spm3">Ukategori 2</label>
+
+                    <div class="input-group">
+
+                        <input type="text" class="form-control" id="input-ukat2" value="{{word.Ukategori2}}">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="col-xs-12  col-md-2">
+
+            <form role="form">
+                <div class="form-group">
+
+                    <label for="input-spm3">Ukategori 3</label>
+
+                    <div class="input-group">
+
+                        <input type="text" class="form-control" id="input-ukat3" value="{{word.Ukategori3}}">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+
+       <!-- <div class="col-xs-12  col-md-3">
+            &lt;!&ndash;<VIS AUDIO FILEN HER>&ndash;&gt;
+
+            <form role="form">
+                <label for="audio-wrong">Audio til forkert svar</label>
+                {{#if quest.audiowrong}}
+                    <audio controls src="{{quest.audiowrong}}"></audio>
+                    <a class="btn btn-danger deleteQuestionWrong">Delete</a>
+                {{else}}
+                    <P>du mangler at vælge</P>
+                    {{> upload_bootstrap fileTypes='audio/mp3' formData=myFormDatawrong callbacks=audiowrong }}
+                    {{> dropzone fileTypes='audio/mp3' formData=myFormDatawrong callbacks=audiowrong}}
+
+                {{/ if}}
+            </form>
+        </div>
+        <div class="col-xs-12  col-md-3">
+            &lt;!&ndash;<VIS AUDIO FILEN HER>&ndash;&gt;
+
+            <form role="form">
+                <label for="audio-question">Audio til spørgsmål</label>
+                {{#if quest.audioquestion}}
+                    <audio controls src="{{quest.audioquestion}}"></audio>
+                    <a class="btn btn-danger deleteQuestionAudio">Delete</a>
+
+                {{else}}
+                    <P>du mangler at vælge</P>
+                    {{> upload_bootstrap fileTypes='audio/mp3' formData=myFormDataQuestion callbacks=audioquestion }}
+                    {{> dropzone fileTypes='audio/mp3' formData=myFormDataQuestion callbacks=audioquestion}}
+                {{/ if}}
+
+
+
+
+
+                &lt;!&ndash;<br/>
+                <input id="audio-question" type="file"/>
+                <br/>
+                <button type="submit" class="btn-success audio-question">Gem lydfil</button>
+                <button type="submit" class="btn-danger" id="audio-question-delete">Slet lydfil</button>&ndash;&gt;
+                &lt;!&ndash;<button type="submit">Upload</button>&ndash;&gt;
+            </form>
+        </div>-->
+        <!--<div class="col-xs-12  col-md-3">
+            <form role="form">
+                <div class="form-group">
+                    <label for="input-phone">Aktiver spørgsmål</label>
+
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="true">
+                            Marker her for at aktivere spørgsmål.
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="false">
+                            Marker her for a deaktivere spørgsmål.
+                        </label>
+                    </div>
+
+                </div>
+            </form>
+        </div>-->
+        <div class="row">
+
+            <div class="col-xs-12 col-md-10 text-center">
+                <br/>
+                <br/>
+                <button type="button" data-dismiss="modal" class="btn btn-default cancel">Fortryd</button>
+                <button type="button" class="btn btn-success opret">Gem og luk</button>
+            </div>
+        </div>
+
+    </div>
+
+
+</template>
+
+<!--
+<template name="editquestion">
+    {{> editquestions}}
+</template>
+
+<template name="uploadedInfo">
+    <div class="documentList">
+        <ul class="list-inline">
+            {{#each this}}
+                <li class="documentItem">
+                    <a href="/upload/{{path}}"><img src="{{src}}"></a><br/>
+                    <label>{{ name }}</label> <br/>
+                    {{ size }} KB<br>
+                    {{#if _id}}
+                        <a class="btn btn-danger deleteUpload">Delete</a>
+                    {{/if}}
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+
+
+</template>
+-->

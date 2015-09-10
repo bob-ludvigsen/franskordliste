@@ -1,0 +1,167 @@
+<template name="listfrench">
+
+         <div class="row">
+            <!-- <div class="col-md-6">
+             <input type="text" class="form-control search-input-filter width-search" value="{{setFrenchFilter}}"
+                    placeholder="Søg på kategori eller ord i spørgsmål">
+
+         </div>-->
+
+             <div class="col-md-6">
+                 <button type="button" class="btn btn-success opret-nyt">Nyt ord!</button>
+
+             </div>
+
+
+
+         </div>
+
+    <div class="results-wrapper">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Redigering af spørgsmål</th>
+
+                    <th>Dansk</th>
+                    <th>Fransk</th>
+                    <th>Dansk fork</th>
+                    <th>Fransk fork</th>
+                    <th>Kategori</th>
+                    <th>Ordklasse</th>
+                    <th>Ejefald</th>
+                    <th>Flertal</th>
+                    <th>Ukategori 1</th>
+                    <th>Ukategori 2</th>
+                    <th>Ukategori 3</th>
+
+                </tr>
+
+                </thead>
+                <tbody>
+                {{> esInput index="wordsdk" reactive="false"   placeholder="Indtast dansk ord..." }}
+
+                <div>Søg Dansk - Fransk</div>
+                {{#esEach index="wordsdk"}}
+                    <tr>
+                        <td>
+                            <a href="#"  id="deletefrench">Slet</a><br/>
+                            <a href="{{pathFor 'edit_french'}}" id="editfrench">Rediger</a>
+                        </td>
+                        <td>{{DK}}</td>
+                        <td>{{FR}}</td>
+                        <td>{{DKForkortelse}}</td>
+                        <td>{{FRForkortelse}}</td>
+                        <td>{{Kategori}}</td>
+                        <td>{{Ordklasse}}</td>
+                        <td>{{Ejefald}}</td>
+                        <td>{{Flertal}}</td>
+                        <td>{{Ejefald}}</td>
+                        <td>{{Ukategori1}}</td>
+                        <td>{{Ukategori2}}</td>
+                        <td>{{Ukategori3}}</td>
+                    </tr>
+                {{/esEach}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+   <!-- <div class="results-wrapper">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Redigering af spørgsmål</th>
+
+                    <th>Dansk</th>
+                    <th>Fransk</th>
+                    <th>Dansk fork</th>
+                    <th>Fransk fork</th>
+                    <th>Kategori</th>
+                    <th>Ordklasse</th>
+                    <th>Ejefald</th>
+                    <th>Flertal</th>
+                    <th>Ukategori 1</th>
+                    <th>Ukategori 2</th>
+                    <th>Ukategori 3</th>
+
+                </tr>
+
+                </thead>
+                <tbody>
+
+                {{#each words}}
+                    <tr>
+                        <td>
+
+                            <a href="#"  id="deletetactic">Slet</a><br/>
+                            <a href="{{pathFor 'edittactic'}}" id="edittactic">Rediger</a>
+                            &lt;!&ndash;<a href="{{pathFor 'editquestion'}}" id="updatequestion" class="glyphicon glyphicon-pencil clickable updatequestion"></a>&ndash;&gt;
+
+
+                        </td>
+
+                        <td>{{DK}}</td>
+                        <td>{{FR}}</td>
+                        <td>{{DKForkortelse}}</td>
+                        <td>{{FRForkortelse}}</td>
+                        <td>{{Kategori}}</td>
+                        <td>{{Ordklasse}}</td>
+                        <td>{{Ejefald}}</td>
+                        <td>{{Flertal}}</td>
+                        <td>{{Ejefald}}</td>
+                        <td>{{Ukategori1}}</td>
+                        <td>{{Ukategori2}}</td>
+                        <td>{{Ukategori3}}</td>
+
+
+                    </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>-->
+
+   <!-- <table class='table table-striped'>
+            <thead>
+            <tr>
+                <th>Redigering af spørgsmål</th>
+                <th>Kategori</th>
+                <th>Spørgsmål</th>
+                <th>Svar 1</th>
+                <th>Svar 2</th>
+                <th>Svar 3</th>
+                <th>Svar 4</th>
+                <th>Korrekt svar</th>
+                <th>Aktiv</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each questions}}
+                <tr class="">
+                    <td>
+
+                        <a href="#"  id="deletequestion">Slet</a><br/>
+                        <a href="{{pathFor 'editquestion'}}">Rediger</a>
+                      &lt;!&ndash;  <a href="{{pathFor 'editquestion'}}" id="updatequestion" class="glyphicon glyphicon-pencil clickable updatequestion"></a>
+&ndash;&gt;
+
+                    </td>
+
+                    <td>{{category}}</td>
+                    <td>{{question}}</td>
+                    <td>{{answer_0}}</td>
+                    <td>{{answer_1}}</td>
+                    <td>{{answer_2}}</td>
+                    <td>{{answer_3}}</td>
+                    <td>{{correct}}</td>
+                    <td>{{active}}</td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+-->
+
+
+</template>

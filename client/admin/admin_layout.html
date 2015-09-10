@@ -1,0 +1,60 @@
+<template name="admin_layout">
+    <nav class="navbar navbar-default default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Forsvarets ordlister</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+
+                    {{#if isInRole 'admin'}}
+                        {{> adminnav}}
+                    {{/if}}
+                    {{#if isInRole 'hto'}}
+                        {{> htonav}}
+                    {{/if}}
+
+
+
+                </ul>
+                <!-- <ul class="nav navbar-nav navbar-right">
+                     <li><a href="./" class="hidden-xs">Log på</a></li>
+
+                 </ul>-->
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+    </nav>
+
+    <div class="container-fluid">
+        {{> yield}}
+    </div>
+
+</template>
+<template name="adminnav">
+    <li><a href="{{pathFor 'admin'}}">Bruger administration</a></li>
+    <li><a href="{{pathFor 'list_tactic'}}">Rediger Hærens Taktiske ordbog</a></li>
+    <li><a href="{{pathFor 'list_english'}}">Rediger engelsk (HTO)</a></li>
+    <li><a href="{{pathFor 'list_french'}}">Rediger fransk</a></li>
+    <li><a href="/">Tilbage til ordlisterne</a></li>
+</template>
+<template name="htonav">
+    <li><a href="{{pathFor 'list_english'}}">Rediger engelsk (HTO)</a></li>
+    <li><a href="/">Tilbage til ordlisterne</a></li>
+</template>
+<template name="frenchnav">
+    <li><a href="{{pathFor 'list_french'}}">Rediger fransk</a></li>
+    <li><a href="/">Tilbage til ordlisterne</a></li>
+</template>
+<template name="ordbognav">
+    <li><a href="{{pathFor 'list_tactic'}}">Rediger Hærens Taktiske ordbog</a></li>
+    <li><a href="/">Tilbage til ordlisterne</a></li>
+</template>

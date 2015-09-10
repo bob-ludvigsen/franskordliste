@@ -1,0 +1,106 @@
+<template name="searchEng">
+
+    <div class="page-header">
+        <h1>Hærtaktisk Ordliste
+            <small>dansk engelsk</small>
+        </h1>
+    </div>
+    <p> <b>Din søgning giver: {{total}} resultater</b></p>
+
+    <div>Søg Dansk - Engelsk</div>
+
+    <div class="results-wrapper">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Dansk</th>
+                    <th>Engelsk</th>
+                    <th>EN fork</th>
+                    <th>DK fork</th>
+                </tr>
+
+                </thead>
+                <tbody>
+
+                {{> esInput index="eng" reactive="false"   placeholder="Indtast dansk ord..." }}
+
+                {{#esEach index="eng"}}
+                    <tr>
+                        <td>{{value}}</td>
+                        <td>{{engelsk}}</td>
+                        <td>{{fork_uk}}</td>
+                        <td>%</td>
+                    </tr>
+                {{/esEach}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    {{> esLoadMoreButton index="eng" content="Hent flere.."}}
+
+    {{#ifEsInputIsEmpty index="eng"}}
+
+
+        <div class="row">
+
+            <h1>Vejledning</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+
+                <p>
+                    HTO er udarbejdet af Sektionen for Engelsk, Institut for Sprog og Kultur.
+                    Den indeholder termer, udtryk og forkortelser der er anvendt i autoriserede engelsksprogede
+                    hær-taktiske tekster, dvs primært reglementer.
+
+                </p>
+
+                <p> HO faggrupperne Ledelse, Taktik, Taktisk Efterretning og Idræt har støttet med input til de danske
+                    termer og udtryk.</p>
+
+
+            </div>
+            <div class="col-md-6">
+
+                <p>Listen er opstillet alfabetisk på både dansk og engelsk. Ord og udtryk der indledes med tal er
+                    placeret før den alfabetiske liste.</p>
+                <ul>
+                    <li>Opslag efterfulgt af (UK) eller (US) angiver enten britisk eller amerikansk stavemåde eller
+                        sprogbrug.
+                    </li>
+                    <li>Opslag efterfulgt af (1), (2), (3) osv angiver at ét ord har flere forskellige oversættelser,
+                        afhængig af sammenhæng.
+                    </li>
+                    <li>Opslag efterfulgt af ! angiver at ordet/vendingen er en kommando.</li>
+                    <li>Opslag skrevet med STORE BOGSTAVER angiver at ordet/vendingen er et radio ekspeditionsord.</li>
+                </ul>
+                <p>HTO er en dynamisk liste, som med jævne mellemrum vil blive opdateret.</p>
+
+                <p><b>Forslag til opdateringer kan sendes til Sektionen for Engelsk, Institut for Sprog og Kultur.</b>
+                </p>
+
+
+                <ul>
+                    <li>fak-isk-et02@mil.dk</li>
+                    <li> fak-isk-et05@mil.dk</li>
+                </ul>
+
+
+            </div>
+        </div>
+
+    {{/ifEsInputIsEmpty}}
+
+    {{#ifEsIsSearching index="eng"}}
+        <div>Henter data...</div>
+        {{> spinner}}
+
+
+    {{/ifEsIsSearching}}
+
+    {{#ifEsHasNoResults index="eng"}}
+        <div class="no-results">Beklager, men det kan jeg ikke finde til dig!</div>
+    {{/ifEsHasNoResults}}
+</template>
