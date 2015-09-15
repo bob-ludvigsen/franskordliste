@@ -7,7 +7,7 @@
 <template name="adminTemplate">
 
 
-    {{#if isInRole 'admin, hto'}}
+    {{#if isInRole 'admin, hto, taktiskordbog, fransk'}}
         {{> accountsAdmin}}
     {{else}}
         <p>Du skal være logget på for at administrere</p>

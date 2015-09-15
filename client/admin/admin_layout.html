@@ -20,8 +20,12 @@
                     {{#if isInRole 'hto'}}
                         {{> htonav}}
                     {{/if}}
-
-
+                    {{#if isInRole 'french'}}
+                        {{> frenchnav}}
+                    {{/if}}
+                    {{#if isInRole 'taktiskordbog'}}
+                        {{> ordbognav}}
+                    {{/if}}
 
                 </ul>
                 <!-- <ul class="nav navbar-nav navbar-right">
