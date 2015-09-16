@@ -1,68 +1,4 @@
-<template name="searchTactic">
-
-    <div class="page-header">
-        <h1>HRN 918-021 Hærens Taktiske Ordbog</h1>
-    </div>
-
-    <p>Din søgning giver: {{total}} resultater</p>
-    <b><p>Søg på indhold i alle felter</p></b>
-    <div class="input-group">
-
-        {{> esInput index="taktik"  class="form-control"  reactive="false"  placeholder="Søg..." }}
-        <div class="input-group-btn">
-            <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
-        </div>
-    </div>
-
-    <div class="results-wrapper">
-        <div class="table-responsive">
-            <table class="table table-hover">
-                <thead>
-                <tr>
-                    <th>Begreb/ord</th>
-                    <th>Forkortelse</th>
-                    <th>Definition</th>
-                    <th>NATO oversættelse og forkortelse</th>
-                    <th>Bemærkning</th>
-                    <th>Rev. dato</th>
-                </tr>
-
-                </thead>
-                <tbody>
-
-                <tr>
-                    <td>
-
-
-
-
-                    </td>
-                </tr>
-
-
-                {{#esEach index="taktik"}}
-                    <tr>
-
-                        <td>{{ord}}</td>
-                        <td>{{fork}}</td>
-                        <td>{{definition}}</td>
-                        <td>{{nato_translation}}</td>
-                        <td>{{remark}}</td>
-                        <td>{{rev}}</td>
-                    </tr>
-                {{/esEach}}
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    {{> esLoadMoreButton index="taktik" class="btn-primary" content="Hent flere.."}}
-
-
-{{#ifEsInputIsEmpty index="taktik"}}
-
-        <h1>Vejledning</h1>
-
+<template name="descrtac">
     <div class="row">
         <div class="col-md-6">
             <p>Hærens Taktiske Ordbog definerer en række af de taktiske begreber, der anvendes i den danske hær.
@@ -102,7 +38,7 @@
                 og præcist og kunne anvendes af alle interessenter. Definitioner skrives på dansk.
             </p>
 
-            <p>Taktisk Ordbog er ikke klassificeret og frigivet til internetbrug.</p>
+            <p>Taktisk Ordbog er ikke klassificeret og er frigivet til internetbrug.</p>
 
             <p><u>Kontaktoplysninger:</u></p>
 
@@ -118,17 +54,4 @@
         </div>
     </div>
 
-{{/ifEsInputIsEmpty}}
-
-
-    {{#ifEsIsSearching index="taktik"}}
-        <div>Henter data...</div>
-        {{> spinner}}
-
-
-    {{/ifEsIsSearching}}
-
-    {{#ifEsHasNoResults index="taktik"}}
-        <div class="no-results">Beklager, men det kan jeg ikke finde til dig!</div>
-    {{/ifEsHasNoResults}}
 </template>

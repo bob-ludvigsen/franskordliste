@@ -1,7 +1,95 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+footer {
+
+    position: absolute;
+    bottom: 0;
+   /* width: 100%;*/
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #2b2b2b;
+    color: white;
+    border-radius:5px;
+    margin-bottom: 25px;
+}
+
+.round{
+    border-radius:5px;
+}
+
 .navbar {
    /* background-color: #c8102e;*/
+    background-color: #2b2b2b;
+    margin-top: 25px;
+    margin-bottom: 25px;
     background-image: none;
     background-repeat: no-repeat;
     filter: none;
+    color: white;
+
+
 
 }
+
+.nav.navbar-nav li a {
+    color: white;
+
+}
+.nav.navbar-nav li a:hover {
+    color: silver;
+
+}
+.nav.navbar-nav li a:focus {
+    color: white;
+
+}
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.navbar-default .navbar-brand a {
+    color: white;
+}
+.navbar-default .navbar-brand:hover {
+    color: silver;
+}
+
+.navbar-default .navbar-brand:focus {
+    color: white;
+}
+
+
+.showmore{
+
+    height: 80px;
+    line-height: 20px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+
+
+
+}
+.black{
+    margin-top: 25px;
+    background-color: #2b2b2b;
+    color: white;
+}
+
+
+/*.footer{
+
+    /!* Set the fixed height of the footer here *!/
+    height: 60px;
+    background-color: #2b2b2b;
+    color: white;
+    border-radius:5px;
+}*/
+

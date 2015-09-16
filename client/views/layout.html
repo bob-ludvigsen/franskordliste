@@ -2,13 +2,19 @@
     <body>
     <div class="container">
 
-        {{> nav}}
+        <div class="wrapper">
+            {{> nav}}
 
-        {{> yield}}
+            {{> yield}}
+            <div class="push"></div>
+        </div>
+
 
         {{> footer}}
 
     </div>
+
+
 
     </body>
 </template>
