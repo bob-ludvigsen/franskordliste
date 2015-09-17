@@ -7,7 +7,18 @@
     </div>
     <p> <b>Din søgning giver: {{total}} resultater</b></p>
 
-    <div>Søg Dansk - Engelsk</div>
+    <b><p>Søg på danske ord</p></b>
+    <div class="grey-background">
+        <div class="input-group">
+
+            {{> esInput index="eng"  class="form-control empty"  reactive="false"  placeholder="Søg..." }}
+            <div class="input-group-btn">
+                <button type="submit" class="btn btn-success" disabled="disabled"><span class="glyphicon glyphicon-search"></span></button>
+                <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button>
+
+            </div>
+        </div>
+    </div>
 
     <div class="results-wrapper">
         <div class="table-responsive">
@@ -23,7 +34,7 @@
                 </thead>
                 <tbody>
 
-                {{> esInput index="eng" reactive="false"   placeholder="Indtast dansk ord..." }}
+
 
                 {{#esEach index="eng"}}
                     <tr>

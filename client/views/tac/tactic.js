@@ -16,7 +16,7 @@ Template.searchTactic.onCreated(function () {
         //searchingIsDone && console.log('I am done!' + instance.get('total'));
     });
 
-    instance.on('currentValue', function (val) {
+        instance.on('currentValue', function (val) {
         //console.log('The user searches for ' + val);
     });
 
@@ -31,3 +31,19 @@ Template.searchTactic.helpers({
     }
 
 })
+
+Template.searchTactic.events(
+
+    {
+        // Fires when any element with the 'accept' class is clicked
+        'click .btn-danger': function (event) {
+            $('.empty').val('');
+            instance.clear();
+
+        }
+
+
+    }
+
+)
+

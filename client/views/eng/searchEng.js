@@ -30,3 +30,20 @@ Template.searchEng.helpers({
     }
 
 })
+
+
+Template.searchEng.events(
+
+    {
+        // Fires when any element with the 'accept' class is clicked
+        'click .btn-danger': function (event) {
+            $('.empty').val('');
+            instance.clear();
+
+        }
+
+
+    }
+
+)
+

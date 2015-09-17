@@ -3,12 +3,12 @@
  */
 
 var instance;
-Template.search.onCreated(function () {
+Template.searchfr.onCreated(function () {
 
 
 
     instance = EasySearch.getComponentInstance(
-        {  index: 'wordsdk'}
+        {  index: 'wordsfr'}
     );
 
     instance.on('searchingDone', function (searchingIsDone) {
@@ -22,7 +22,7 @@ Template.search.onCreated(function () {
 
 });
 
-Template.search.helpers({
+Template.searchfr.helpers({
 
     total: function () {
         var total = 0;
@@ -32,7 +32,7 @@ Template.search.helpers({
 
 })
 
-Template.search.events(
+Template.searchfr.events(
 
     {
         // Fires when any element with the 'accept' class is clicked

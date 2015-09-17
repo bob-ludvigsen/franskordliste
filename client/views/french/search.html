@@ -5,6 +5,19 @@
         <h1>Dansk - fransk <small>ordliste</small></h1>
     </div>
     <p> <b>Din søgning giver: {{total}} resultater</b></p>
+    <b><p>Søg på danske ord</p></b>
+    <div class="grey-background">
+        <div class="input-group">
+
+            {{> esInput index="wordsdk"  class="form-control empty"  reactive="false"  placeholder="Indtast dansk ord..." }}
+            <div class="input-group-btn">
+                <button type="submit" class="btn btn-success" disabled="disabled"><span class="glyphicon glyphicon-search"></span></button>
+                <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button>
+
+            </div>
+        </div>
+    </div>
+
 
     <div class="results-wrapper">
         <div class="table-responsive">
@@ -19,7 +32,7 @@
 
                 </thead>
                 <tbody>
-                {{> esInput index="wordsdk" reactive="false"   placeholder="Indtast dansk ord..." }}
+
 
                 <div>Søg Dansk - Fransk</div>
                 {{#esEach index="wordsdk"}}

@@ -6,6 +6,23 @@
     </div>
     <p>Din søgning giver: {{total}} resultater</p>
 
+ <!--   {{> esInput index="wordsfr" reactive=false placeholder="Indtast fransk ord..." }}
+    <div>Søg Fransk - Dansk</div>-->
+
+    <b><p>Søg på franske ord og forkortelser</p></b>
+    <div class="grey-background">
+        <div class="input-group">
+
+            {{> esInput index="wordsfr"  class="form-control empty"  reactive="false"  placeholder="Indtast fransk ord eller forkortelse..." }}
+            <div class="input-group-btn">
+                <button type="submit" class="btn btn-success" disabled="disabled"><span class="glyphicon glyphicon-search"></span></button>
+                <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button>
+
+            </div>
+        </div>
+    </div>
+
+
     <div class="results-wrapper">
         <div class="table-responsive">
             <table class="table table-hover">
@@ -19,8 +36,7 @@
 
                 </thead>
                 <tbody>
-                {{> esInput index="wordsfr" reactive=false placeholder="Indtast fransk ord..." }}
-                <div>Søg Fransk - Dansk</div>
+
                 {{#esEach index="wordsfr"}}
                     <tr>
                         <td>{{FR}} ({{Ordklasse}})</td>

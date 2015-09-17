@@ -70,7 +70,7 @@ EasySearch.createSearchIndex('engFork', {
 
 EasySearch.createSearchIndex('wordsfr', {
     collection: Lists,
-    field: 'FR',
+    field: ['FR','FRForkortelse'],
     'reactive': false,
     'limit': 30,
     returnFields: ['FR', 'DK', 'Ordklasse', 'FRForkortelse', 'DKforkortelse'],
