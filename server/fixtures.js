@@ -3,6 +3,36 @@
  */
 Meteor.startup(function() {
 
+    if (Eng.find().count() === 0) {
+
+        // create sample polls
+        var sampleWords = JSON.parse(Assets.getText('eng.json'));
+
+        // loop over each sample poll and insert into database
+        _.each(sampleWords, function(words) {
+            Eng.insert(words);
+        });
+
+    }
+   /* Eng.find().forEach(
+
+        function(elem){
+
+            Eng.update(
+
+                {_id: elem._id},
+                {$set:
+                {value_sort: elem.value.toLowerCase(), engelsk_sort: elem.engelsk.toLowerCase()}
+                }
+
+            );
+
+        }
+
+
+    )*/
+
+
 /*
 
     if (Lists.find().count() === 0) {

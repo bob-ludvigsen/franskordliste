@@ -61,6 +61,12 @@ Template.listeng.events({
            // Tactic.remove({_id: this._id});
         };
 
+    },
+    // Fires when any element with the 'accept' class is clicked
+    'click .btn-danger': function (event) {
+        $('.empty').val('');
+
+
     }
 
 

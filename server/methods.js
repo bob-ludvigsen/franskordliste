@@ -176,22 +176,33 @@ Meteor.methods({
 
     },
 
-    createeng: function (dkord, enord, enfork) {
+    createeng: function (dkord, enord, enfork, dkfork, dkSort, engSort) {
+
         Eng.insert({
             "value": dkord,
             "engelsk": enord,
-            "fork_uk": enfork
+            "fork_uk": enfork,
+            "fork_da": dkfork,
+            "value_sort" : dkSort,
+            "engelsk_sort" : engSort
+
+
+
         });
 
 
     },
 
-    editeng: function (engId, dkord, enord, enfork) {
+    editeng: function (engId, dkord, enord, enfork, dkfork, dkSort, engSort) {
+
         Eng.update({_id: engId}, {
             $set: {
                 "value": dkord,
                 "engelsk": enord,
-                "fork_uk": enfork
+                "fork_uk": enfork,
+                "fork_da": dkfork,
+                "value_sort" : dkSort,
+                "engelsk_sort" : engSort
             }
         });
 

@@ -34,6 +34,10 @@ footer a:focus{
     color: silver;
 }
 
+.footer1{
+    clear: both;
+
+}
 
 .round{
     border-radius:5px;
@@ -108,7 +112,7 @@ footer a:focus{
     color: white;
 }
 .spacer {
-    margin-top: 40px;
+    margin-top: 70px;
 }
 .grey-background{
     background-color: #E5E5E5;
@@ -126,7 +130,7 @@ footer a:focus{
     margin-right: 16px;
 
 }
-
+/*
 hr.fancy-line {
     border: 0;
     height: 1px;
@@ -152,9 +156,11 @@ hr.fancy-line, hr.fancy-line:before {
     background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
 }
 
-body, hr.fancy-line:after {
+
+hr.fancy-line:after {
     background: #f4f4f4;
 }
+*/
 
 .front-text{
 
@@ -183,6 +189,10 @@ body, hr.fancy-line:after {
         min-height: 100px;
 
     }
+    .spacer {
+        margin-top: 40px;
+    }
+
 }
 
 /* Medium devices (desktops, 992px and up) */

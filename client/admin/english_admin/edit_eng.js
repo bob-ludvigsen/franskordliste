@@ -2,29 +2,6 @@
  * Created by bob on 25/09/14.
  */
 
-Template.edittactic.rendered = function () {
-
-  /*  var spotId = Session.get('qId');
-    //var role = Meteor.user().roles;
-    //alert(Session.get('qId'));
-    //alert(spotId);
-    var dropdata = Tactic.findOne({_id: spotId});
-    //alert(typeof dropdata.active);
-
-    if (dropdata) {
-    var active = $.parseJSON(dropdata.active);
-
-    if (active == true) {
-        $("#optionsRadios1").prop("checked", true);
-        $("#optionsRadios2").prop("checked", false);
-    }
-    else {
-        $("#optionsRadios1").prop("checked", false);
-        $("#optionsRadios2").prop("checked", true);
-    }
-    }*/
-};
-
 Template.editeng.helpers({
 
      word: function() {
@@ -241,9 +218,12 @@ Template.editeng.events({
         var dk = tmpl.find('#input-dk').value;
         var eng = tmpl.find('#input-eng').value;
         var fork = tmpl.find('#input-fork').value;
+        var dkfork = tmpl.find('#input-fork-dk').value;
+        var dkSort = tmpl.find('#input-dk').value.toLowerCase();
+        var engSort = tmpl.find('#input-eng').value.toLowerCase();
 
 
-        Meteor.call('editeng',tacId, dk, eng, fork);
+        Meteor.call('editeng',tacId, dk, eng, fork, dkfork, dkSort, engSort);
 
         Router.go('/list_english');
         //alert(options.correct);

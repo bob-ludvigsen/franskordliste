@@ -141,9 +141,11 @@ Template.createeng.events({
         var dk = tmpl.find('#input-dk').value;
         var eng = tmpl.find('#input-eng').value;
         var fork = tmpl.find('#input-fork').value;
+        var dkfork = tmpl.find('#input-fork-dk').value;
+        var dkSort = tmpl.find('#input-dk').value.toLowerCase();
+        var engSort = tmpl.find('#input-eng').value.toLowerCase();
 
-
-        Meteor.call('createeng', dk, eng, fork);
+        Meteor.call('createeng', dk, eng, fork, dkfork, dkSort, engSort);
 
         Router.go('/list_english');
         //alert(options.correct);

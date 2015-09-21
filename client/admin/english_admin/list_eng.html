@@ -2,8 +2,19 @@
 
          <div class="row">
              <div class="col-md-6">
-             <input type="text" class="form-control search-input-filter width-search" value="{{setTacticFilter}}"
-                    placeholder="Søg engelsk eller dansk ord">
+                 <div class="grey-background">
+                     <div class="input-group">
+
+                         <input type="text" class="form-control search-input-filter width-search" value="{{setTacticFilter}}"
+                                placeholder="Søg engelsk eller dansk ord">
+                         <div class="input-group-btn">
+                             <button type="submit" class="btn btn-success" disabled="disabled"><span class="glyphicon glyphicon-search"></span></button>
+                             <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button>
+
+                         </div>
+                     </div>
+
+</div>
 
          </div>
 
@@ -25,6 +36,7 @@
                     <th>Dansk</th>
                     <th>Engelsk</th>
                     <th>Engelsk forkortelse</th>
+                    <th>Dansk forkortelse</th>
 
                 </tr>
 
@@ -45,6 +57,7 @@
                         <td>{{value}}</td>
                         <td>{{engelsk}}</td>
                         <td>{{fork_uk}}</td>
+                        <td>{{fork_da}}</td>
 
                     </tr>
                 {{/each}}

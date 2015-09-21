@@ -26,7 +26,7 @@ EasySearch.createSearchIndex('eng', {
     'reactive': false,
     'limit': 30,
     'sort': function () {
-        return {'value': 1};
+        return {'value_sort': 1};
     },
     returnFields: ['value', 'engelsk', 'fork_uk'],
     use: 'mongo-db'
@@ -38,7 +38,7 @@ EasySearch.createSearchIndex('engDk', {
     'reactive': false,
     'limit': 30,
     'sort': function () {
-        return {'engelsk': 1};
+        return {'engelsk_sort': 1};
     },
     returnFields: ['value', 'engelsk', 'fork_uk'],
     use: 'mongo-db'
@@ -55,13 +55,13 @@ EasySearch.createSearchIndex('engFork', {
     use: 'mongo-db'
 });
 
-EasySearch.createSearchIndex('engFork', {
+EasySearch.createSearchIndex('daFork', {
     collection: Eng,
-    field: 'fork_uk',
+    field: 'fork_da',
     'reactive': false,
     'limit': 30,
     'sort': function () {
-        return {'fork_uk': 1};
+        return {'fork_da': 1};
     },
     returnFields: ['value', 'engelsk', 'fork_uk'],
     use: 'mongo-db'
