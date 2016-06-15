@@ -30,7 +30,7 @@
   "appName": "franskordliste",
 
   // Location of app (local directory)
-  "app": "/Users/Bob/WebstormProjects/franskordliste",
+  "app": "/Users/Bob/WebstormProjects/oreilly/franskordliste",
 
   // Configure environment
   "env": {

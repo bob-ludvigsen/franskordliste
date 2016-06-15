@@ -3,7 +3,7 @@
  */
 Meteor.startup(function() {
 
-    if (Eng.find().count() === 0) {
+    /*  if (Eng.find().count() === 0) {
 
         // create sample polls
         var sampleWords = JSON.parse(Assets.getText('eng.json'));
